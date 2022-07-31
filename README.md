@@ -13,7 +13,7 @@
 ## Installation
 
 ```sh
-$ npm install -g amcServerless
+$ npm install -g amc-serverless
 ```
 ## Quick Start
 
@@ -22,7 +22,7 @@ The quickest way to get started with serverless is to utilize the executable `se
 Create the app:
 
 ```bash
-$ amcServerless  newProyect
+$ amc-serverless  newProyect [name_proyect]
 ```
 
 Install dependencies:
