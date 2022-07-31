@@ -22,7 +22,7 @@ The quickest way to get started with serverless is to utilize the executable `se
 Create the app:
 
 ```bash
-$ amc-serverless  newProyect [name_proyect]
+$ amcServerless  newProyect [name_proyect]
 ```
 
 Install dependencies:
