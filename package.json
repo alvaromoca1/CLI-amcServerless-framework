@@ -1,8 +1,7 @@
 {
-  "name": "build-generae-ddd-typescript",
-  "version": "1.0.0",
+  "name": "Generate-Serverless-DDD",
+  "version": "1.0.1",
   "description": "Generate DDD serverless Typescript",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
