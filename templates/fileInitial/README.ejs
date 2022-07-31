@@ -13,7 +13,7 @@
 ## Installation
 
 ```sh
-$ npm install -g amc-serverless
+$ npm install -g amc-serverless-generate
 ```
 ## Quick Start
 
