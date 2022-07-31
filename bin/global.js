@@ -62,7 +62,7 @@ const main = () => {
         renderFileCode(filename,{},options,out);
 
         filename = path.join(__dirname, "../templates/infraestructure/helpers/response.ejs")
-        out = "/app/src/infraestructure/helpers/response.ts";
+        out = `/${leftovers[1]}/src/infraestructure/helpers/response.ts`;
         renderFileCode(filename,{},options,out);
 
         //--application
