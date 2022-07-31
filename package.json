@@ -1,5 +1,5 @@
 {
-  "name": "generate-serverless-ddd",
+  "name": "amcServerless",
   "version": "1.0.2",
   "description": "Generate DDD serverless Typescript",
   "scripts": {
