@@ -1,0 +1,47 @@
+service: example-amcServerless
+
+package:
+  individually: true
+  exclude:
+    - awscliv2.zip
+    - terraform/**
+    - aws/**
+
+frameworkVersion: '3'
+
+custom:
+  lamdbaHelloWord: lmb-${self:provider.stage}-${self:service}-helloword-01
+  esbuild:
+    bundle: true
+    minify: true
+    metafile: false
+    exclude:
+    - 'aws-sdk'
+    target: 'node14'
+    platform: 'node'
+
+provider:
+  name: aws
+  region: us-east-1
+  lambdaHashingVersion: 20220515
+  runtime: nodejs14.x
+  stage: dev
+  
+functions:
+  helloWord:
+    handler: src/infraestructure/handlers/hello-handler.getHello
+    name: ${self:custom.lamdbaHelloWord}
+    description: this function is for hello test
+    events:
+      - http:
+          path: /helloword       # https://dominio.fulanito/{stage}/empleados
+          method: get
+
+plugins:
+  - serverless-esbuild
+  - serverless-deployment-bucket
+  - serverless-offline
+  - serverless-iam-roles-per-function
+  - serverless-import-apigateway
+  - serverless-step-functions
+  
