@@ -1,5 +1,5 @@
 {
-  "name": "Generate-Serverless-DDD",
+  "name": "generate-serverless-ddd",
   "version": "1.0.2",
   "description": "Generate DDD serverless Typescript",
   "scripts": {
