@@ -122,11 +122,31 @@ const main = () => {
                         break;
 
                         case "controller":
-                            
+                            console.log(emoji.get('heavy_check_mark'), "Create the Controller ", leftovers[2]);
+                            filename = path.join(__dirname, "../templates/application/controllers/generateController.ejs")
+                            out = `/src/application/controllers/${leftovers[2]}.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+                        break;
+
+                        case "c":
+                            console.log(emoji.get('heavy_check_mark'), "Create the Controller ", leftovers[2]);
+                            filename = path.join(__dirname, "../templates/application/controllers/generateController.ejs")
+                            out = `/src/application/controllers/${leftovers[2]}.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
 
                         case "service":
-                            
+                            console.log(emoji.get('heavy_check_mark'), "Create the Service or CaseUse ", leftovers[2]);
+                            filename = path.join(__dirname, "../templates/domain/useCase/generateService.ejs")
+                            out = `/src/domain/useCase/${leftovers[2]}.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+                        break;
+
+                        case "s":
+                            console.log(emoji.get('heavy_check_mark'), "Create the Service or CaseUse ", leftovers[2]);
+                            filename = path.join(__dirname, "../templates/domain/useCase/generateService.ejs")
+                            out = `/src/domain/useCase/${leftovers[2]}.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
                     
                         default:
@@ -150,6 +170,15 @@ const main = () => {
         if(help){
             console.log(emoji.get('smile'), "-- Comand --");
             console.log(emoji.get('heavy_check_mark'), "amcServerless newProyect [your_name_proyect] -> for create a new proyect");
+
+            console.log(emoji.get('heavy_check_mark'), "amcServerless g h [your_name_hamdler] -> for create a new handler");
+            console.log(emoji.get('heavy_check_mark'), "amcServerless generate handler [your_name_hamdler] -> for create a new handler");
+
+            console.log(emoji.get('heavy_check_mark'), "amcServerless g c [your_name_controller] -> for create a new controller");
+            console.log(emoji.get('heavy_check_mark'), "amcServerless generate controller [your_name_controller] -> for create a new controller");
+
+            console.log(emoji.get('heavy_check_mark'), "amcServerless g s [your_name_service] -> for create a new service or caseUse");
+            console.log(emoji.get('heavy_check_mark'), "amcServerless generate service [your_name_service] -> for create a new service or caseUse");
         }
         else{
             console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help.");
