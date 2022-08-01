@@ -45,6 +45,10 @@ const main = () => {
                     out = `/${leftovers[1]}/README.md`;
                     renderFileCode(filename,{},options,out);
 
+                    filename = path.join(__dirname, "../templates/fileInitial/gitignore.ejs")
+                    out = `/${leftovers[1]}/.gitignore`;
+                    renderFileCode(filename,{},options,out);
+
 
                     //file for proyect hello
                     //--infraestructure
