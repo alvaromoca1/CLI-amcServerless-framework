@@ -1,0 +1,7 @@
+import  {HttpResponse} from '../helpers/response';
+import { <%= nameFunction %>Controller } from '@application/controllers/<%= nameFunction %>Controller';
+
+export const <%= nameFunction %>Handler = async (event) => {
+  const data = await <%= nameFunction %>Controller(event);
+  return data;
+};

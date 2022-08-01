@@ -110,42 +110,76 @@ const main = () => {
                         case "handler":
                             console.log(emoji.get('heavy_check_mark'), "Create the handler ", leftovers[2]);
                             filename = path.join(__dirname, "../templates/infraestructure/handlers/generateHandler.ejs")
-                            out = `/src/infraestructure/handlers/${leftovers[2]}.ts`;
+                            out = `/src/infraestructure/handlers/${leftovers[2]}Handler.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
 
                         case "h":
                             console.log(emoji.get('heavy_check_mark'), "Create the handler ", leftovers[2]);
                             filename = path.join(__dirname, "../templates/infraestructure/handlers/generateHandler.ejs")
-                            out = `/src/infraestructure/handlers/${leftovers[2]}.ts`;
+                            out = `/src/infraestructure/handlers/${leftovers[2]}Handler.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
 
                         case "controller":
                             console.log(emoji.get('heavy_check_mark'), "Create the Controller ", leftovers[2]);
                             filename = path.join(__dirname, "../templates/application/controllers/generateController.ejs")
-                            out = `/src/application/controllers/${leftovers[2]}.ts`;
+                            out = `/src/application/controllers/${leftovers[2]}Controller.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
 
                         case "c":
                             console.log(emoji.get('heavy_check_mark'), "Create the Controller ", leftovers[2]);
                             filename = path.join(__dirname, "../templates/application/controllers/generateController.ejs")
-                            out = `/src/application/controllers/${leftovers[2]}.ts`;
+                            out = `/src/application/controllers/${leftovers[2]}Controller.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
 
                         case "service":
                             console.log(emoji.get('heavy_check_mark'), "Create the Service or CaseUse ", leftovers[2]);
                             filename = path.join(__dirname, "../templates/domain/useCase/generateService.ejs")
-                            out = `/src/domain/useCase/${leftovers[2]}.ts`;
+                            out = `/src/domain/useCase/${leftovers[2]}UseCase.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
 
                         case "s":
                             console.log(emoji.get('heavy_check_mark'), "Create the Service or CaseUse ", leftovers[2]);
                             filename = path.join(__dirname, "../templates/domain/useCase/generateService.ejs")
-                            out = `/src/domain/useCase/${leftovers[2]}.ts`;
+                            out = `/src/domain/useCase/${leftovers[2]}UseCase.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+                        break;
+
+                        case "module":
+                            console.log(emoji.get('heavy_check_mark'), `Create the handler ${leftovers[2]}Handler.ts`);
+                            filename = path.join(__dirname, "../templates/infraestructure/handlers/mainHandler.ejs")
+                            out = `/src/infraestructure/handlers/${leftovers[2]}Handler.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+
+                            console.log(emoji.get('heavy_check_mark'), `Create the Controller ${leftovers[2]}Controller.ts`);
+                            filename = path.join(__dirname, "../templates/application/controllers/mainController.ejs")
+                            out = `/src/application/controllers/${leftovers[2]}Controller.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+
+                            console.log(emoji.get('heavy_check_mark'), `Create the Service or CaseUse ${leftovers[2]}UseCase.ts`);
+                            filename = path.join(__dirname, "../templates/domain/useCase/mainService.ejs")
+                            out = `/src/domain/useCase/${leftovers[2]}UseCase.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+                        break;
+
+                        case "m":
+                            console.log(emoji.get('heavy_check_mark'), `Create the handler ${leftovers[2]}Handler.ts`);
+                            filename = path.join(__dirname, "../templates/infraestructure/handlers/mainHandler.ejs")
+                            out = `/src/infraestructure/handlers/${leftovers[2]}Handler.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+
+                            console.log(emoji.get('heavy_check_mark'), `Create the Controller ${leftovers[2]}Controller.ts`);
+                            filename = path.join(__dirname, "../templates/application/controllers/mainController.ejs")
+                            out = `/src/application/controllers/${leftovers[2]}Controller.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+
+                            console.log(emoji.get('heavy_check_mark'), `Create the Service or CaseUse ${leftovers[2]}UseCase.ts`);
+                            filename = path.join(__dirname, "../templates/domain/useCase/mainService.ejs")
+                            out = `/src/domain/useCase/${leftovers[2]}UseCase.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                         break;
                     
