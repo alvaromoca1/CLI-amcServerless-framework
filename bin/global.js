@@ -213,6 +213,9 @@ const main = () => {
 
             console.log(emoji.get('heavy_check_mark'), "amcServerless g s [your_name_service] -> for create a new service or caseUse");
             console.log(emoji.get('heavy_check_mark'), "amcServerless generate service [your_name_service] -> for create a new service or caseUse");
+
+            console.log(emoji.get('heavy_check_mark'), "amcServerless g m [your_name_module] -> for create a new service or Module");
+            console.log(emoji.get('heavy_check_mark'), "amcServerless generate module [your_name_module] -> for create a new service or Module");
         }
         else{
             console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help.");
