@@ -39,6 +39,33 @@ Start your Express.js app at `http://0.0.0.0:3000/dev/helloword`:
 ```bash
 $ sls offline --stage dev --region us-east-1 --host 0.0.0.0
 ```
+## The Comand
+
+for create a new handler
+```bash
+$ amcServerless g h [your_name_hamdler]
+or
+$ amcServerless g handler [your_name_hamdler]
+```
+for create a new controller
+```bash
+$ amcServerless g c [your_name_controller]
+or
+$ amcServerless g controller [your_name_controller]
+```
+for create a new service or caseUse
+```bash
+$ amcServerless g s [your_name_service]
+or
+$ amcServerless g service [your_name_service]
+```
+for create a new service or Module
+```bash
+$ amcServerless g m [your_name_module]
+or
+$ amcServerless g module [your_name_module]
+```
+
 ## License
 
 [MIT](LICENSE)
