@@ -2,6 +2,8 @@
 
 - Generates a complete serverless framework project
 - Use of typeScript for the project
+- Use jest with UniTest
+- Use DDD
 
 ## amcServerless Generate
 
@@ -11,7 +13,8 @@
 [![Windows Build][appveyor-image]][appveyor-url]
 ### Link npm
 
-`<link npm>` : <https://github.com/alvaromoca1/CLI-amcServerless-framework/tree/main>
+`<link npm>` : <https://www.npmjs.com/package/amc-serverless-generate>
+`<link gitHub>` : <https://github.com/alvaromoca1/CLI-amcServerless-framework/tree/main>
 
 ## Installation
 

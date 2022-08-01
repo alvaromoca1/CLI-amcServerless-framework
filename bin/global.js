@@ -49,6 +49,10 @@ const main = () => {
                     out = `/${leftovers[1]}/.gitignore`;
                     renderFileCode(filename,{},options,out);
 
+                    filename = path.join(__dirname, "../templates/fileInitial/test/hello.test.ejs")
+                    out = `/${leftovers[1]}/test/hello.test.ts`;
+                    renderFileCode(filename,{},options,out);
+
 
                     //file for proyect hello
                     //--infraestructure
@@ -164,6 +168,13 @@ const main = () => {
                             filename = path.join(__dirname, "../templates/domain/useCase/mainService.ejs")
                             out = `/src/domain/useCase/${leftovers[2]}UseCase.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+
+                            console.log(emoji.get('heavy_check_mark'), `Create the test for handler ${leftovers[2]}.test.ts`);
+                            filename = path.join(__dirname, "../templates/fileInitial/test/mainHello.test.ejs")
+                            out = `/test/${leftovers[2]}.test.ts`;
+                            renderFileCode(filename,{},options,out);
+
+                            console.log(emoji.get('warning'), `add the ${leftovers[2]}Handler.ts in the serverless.yml in the configuration`);
                         break;
 
                         case "m":
@@ -181,6 +192,13 @@ const main = () => {
                             filename = path.join(__dirname, "../templates/domain/useCase/mainService.ejs")
                             out = `/src/domain/useCase/${leftovers[2]}UseCase.ts`;
                             renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+
+                            console.log(emoji.get('heavy_check_mark'), `Create the test for handler ${leftovers[2]}.test.ts`);
+                            filename = path.join(__dirname, "../templates/fileInitial/test/mainHello.test.ejs")
+                            out = `/test/${leftovers[2]}.test.ts`;
+                            renderFileCode(filename,{},options,out);
+                            
+                            console.log(emoji.get('warning'), `add the ${leftovers[2]}Handler.ts in the serverless.yml in the configuration`);
                         break;
                     
                         default:
