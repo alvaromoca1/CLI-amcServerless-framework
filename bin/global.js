@@ -10,13 +10,13 @@ const main = () => {
   try {
     let out;
     let fn;
+    const options = {}
     const { _: leftovers,help} = argv
-    if(leftovers.length < 3 && leftovers.length != 0 ){
+    if(leftovers.length < 4 && leftovers.length != 0 ){
         switch (leftovers[0]) {
             case "newProyect":
                 if(leftovers[1]){
                     console.log(emoji.get('beer'), "Generating template...");
-                    const options = {}
                     let filename;
                     
                     //file inicials
@@ -100,12 +100,49 @@ const main = () => {
                     console.log(emoji.get('beer'), "task complete");
                 }
                 else{
-                    console.log(emoji.get('poop'), " -> need name for proyect, syntax error, press  amcServerless --help for more help");
+                    console.log(emoji.get('poop'), " -> need name for proyect, syntax error, press  amcServerless --help for more help.");
                 }
             break;
         
+            case "g":
+                if(leftovers[1] && leftovers[2]){
+                    switch (leftovers[1]) {
+                        case "handler":
+                            console.log(emoji.get('heavy_check_mark'), "Create the handler ", leftovers[2]);
+                            filename = path.join(__dirname, "../templates/infraestructure/handlers/generateHandler.ejs")
+                            out = `/src/infraestructure/handlers/${leftovers[2]}.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+                        break;
+
+                        case "h":
+                            console.log(emoji.get('heavy_check_mark'), "Create the handler ", leftovers[2]);
+                            filename = path.join(__dirname, "../templates/infraestructure/handlers/generateHandler.ejs")
+                            out = `/src/infraestructure/handlers/${leftovers[2]}.ts`;
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
+                        break;
+
+                        case "controller":
+                            
+                        break;
+
+                        case "service":
+                            
+                        break;
+                    
+                        default:
+                            console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help.");
+                        break;
+                    }
+                }
+                else{
+                    console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help.");
+                }
+            break;
+
+            case "generate":
+            break;
             default:
-                console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help");
+                console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help.");
             break;
         }
     }
@@ -115,7 +152,7 @@ const main = () => {
             console.log(emoji.get('heavy_check_mark'), "amcServerless newProyect [your_name_proyect] -> for create a new proyect");
         }
         else{
-            console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help");
+            console.log(emoji.get('poop'), " -> syntax error, press  amcServerless --help for more help.");
         }
     }
   } catch (err) {
