@@ -1,0 +1,8 @@
+import {<%= nameFunction %>Handler} from '../src/infraestructure/handlers/<%= nameFunction %>Handler'
+
+describe('Test of example is genered',()=>{
+    test("second test",async ()=> {
+        const result = await <%= nameFunction %>Handler("string event");
+        expect(result.statusCode).toBe(200);
+    })
+})
