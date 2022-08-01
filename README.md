@@ -5,7 +5,10 @@
 
 ## amcServerless Generate
 
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Linux Build][github-actions-ci-image]][github-actions-ci-url]
+[![Windows Build][appveyor-image]][appveyor-url]
 ### Link npm
 
 `<link npm>` : <https://github.com/alvaromoca1/CLI-amcServerless-framework/tree/main>
@@ -39,3 +42,12 @@ $ sls offline --stage dev --region us-east-1 --host 0.0.0.0
 ## License
 
 [MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/amc-serverless-generate.svg
+[npm-url]: https://npmjs.org/package/amc-serverless-generate
+[appveyor-image]: https://img.shields.io/appveyor/ci/dougwilson/generator/master.svg?label=windows
+[appveyor-url]: https://ci.appveyor.com/project/dougwilson/generator
+[downloads-image]: https://img.shields.io/npm/dm/amc-serverless-generate.svg
+[downloads-url]: https://npmjs.org/package/amc-serverless-generate
+[github-actions-ci-image]: https://img.shields.io/github/workflow/status/expressjs/generator/ci/master?label=linux
+[github-actions-ci-url]: https://github.com/expressjs/generator/actions/workflows/ci.yml

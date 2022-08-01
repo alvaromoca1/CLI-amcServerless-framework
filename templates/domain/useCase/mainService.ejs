@@ -1,0 +1,15 @@
+import { HttpResponse } from "@infraestructure/helpers/response";
+
+export const <%= nameFunction %>UseCase = async (event)=>{
+    
+    try {
+        const message={
+            message: "Service Example."
+        }
+        return HttpResponse._200(message);
+
+    } catch (error) {
+        console.debug("error AuthorizerUseCase ->",error);
+        return HttpResponse._500(error);
+    }
+}
