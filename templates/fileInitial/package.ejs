@@ -6,11 +6,12 @@
   "license": "MIT",
   "scripts": {
     "deploy:dev": "sls deploy --stage dev --region us-east-1",
-    "offline": "sls offline --stage dev --region us-east-1 --host 0.0.0.0"
+    "offline": "sls offline --stage dev --region us-east-1 --host 0.0.0.0",
+    "test": "jest --verbose --silent ./test/"
   },
   "devDependencies": {
     "@types/jest": "27.4.1",
-    "@types/node": "17.0.29",
+    "@types/node": "^17.0.45",
     "esbuild": "0.14.27",
     "jest": "28.1.0",
     "jest-junit": "13.2.0",
@@ -41,5 +42,20 @@
     "jwt-decode": "^3.1.2",
     "jsonwebtoken": "8.5.1",
     "uuid": "8.3.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
+    "moduleNameMapper": {
+      "^@application/(.*)$": "<rootDir>/src/application/$1",
+      "^@domain/(.*)$": "<rootDir>/src/domain/$1",
+      "^@infraestructure/(.*)$": "<rootDir>/src/infraestructure/$1"
+    }
   }
 }
