@@ -172,7 +172,7 @@ const main = () => {
                             console.log(emoji.get('heavy_check_mark'), `Create the test for handler ${leftovers[2]}.test.ts`);
                             filename = path.join(__dirname, "../templates/fileInitial/test/mainHello.test.ejs")
                             out = `/test/${leftovers[2]}.test.ts`;
-                            renderFileCode(filename,{},options,out);
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
 
                             console.log(emoji.get('warning'), `add the ${leftovers[2]}Handler.ts in the serverless.yml in the configuration`);
                         break;
@@ -196,7 +196,7 @@ const main = () => {
                             console.log(emoji.get('heavy_check_mark'), `Create the test for handler ${leftovers[2]}.test.ts`);
                             filename = path.join(__dirname, "../templates/fileInitial/test/mainHello.test.ejs")
                             out = `/test/${leftovers[2]}.test.ts`;
-                            renderFileCode(filename,{},options,out);
+                            renderFileCode(filename,{nameFunction:leftovers[2]},options,out);
                             
                             console.log(emoji.get('warning'), `add the ${leftovers[2]}Handler.ts in the serverless.yml in the configuration`);
                         break;
