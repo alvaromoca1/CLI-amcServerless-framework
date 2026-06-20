@@ -1,6 +1,6 @@
 {
   "name": "amc-serverless-generate",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Generate DDD serverless Typescript",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
